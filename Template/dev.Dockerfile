@@ -11,7 +11,7 @@ RUN dotnet restore
 WORKDIR /app/
 COPY TemplateConsole/. ./TemplateConsole/
 WORKDIR /app/TemplateConsole
-RUN dotnet publish -c Release -o out
+RUN dotnet publish -c Debug -o out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/core/runtime:2.2 AS runtime
